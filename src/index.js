@@ -1,15 +1,21 @@
+//Require React 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+import SearchBar from './components/search_bar';
 
-import App from './components/app';
-import reducers from './reducers';
+const API_KEY = 'AIzaSyD31qEUgeSRHwwPh5Vw1Fiz_rhuk-q2xic';
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
 
-ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
-    <App />
-  </Provider>
-  , document.querySelector('.container'));
+// Create a new component. This componet should produce html.
+// const means constant it will never change.
+const App = () => {
+	return (
+		<div>
+          <SearchBar />
+	    </div>
+	);
+}
+
+
+// Render the component generated html and put it in the dom. 
+ReactDOM.render(<App />, document.querySelector('.container'));
