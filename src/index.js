@@ -30,7 +30,7 @@ class App extends Component {
 	    </div>
 	);
   }
-}
+};
 
 
 // Render the component generated html and put it in the dom. 
