@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import YTSearch from 'youtube-api-search';
 import SearchBar from './components/search_bar';
+import VideoList from './components/video_list';
 const API_KEY = 'AIzaSyD31qEUgeSRHwwPh5Vw1Fiz_rhuk-q2xic';
 
 // Create a new component. This componet should produce html.
@@ -10,7 +11,7 @@ const API_KEY = 'AIzaSyD31qEUgeSRHwwPh5Vw1Fiz_rhuk-q2xic';
 //downward data flow, most parent component responsible for getting stuff
 class App extends Component {
   //constuctor always gets called with props 
-  constuctor(props){
+  constructor(props){
   	super(props);
 
   	this.state = { videos: []};
@@ -25,6 +26,7 @@ class App extends Component {
 	return (
 		<div>
           <SearchBar />
+          <VideoList videos={this.state.videos} />
 	    </div>
 	);
   }
