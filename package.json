@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "postinstall": "webpack --config ./webpack-prod.config.js"
+    "postinstall": "webpack --config ./webpack-production.config.js"
   },
   "author": "",
   "license": "ISC",
