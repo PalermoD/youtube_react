@@ -9,8 +9,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "dist": "cross-env NODE_ENV=production webpack -p --progress",
-    "postinstall": "npm run dist"
+    "postinstall": "webpack --config ./webpack-prod.config.js"
   },
   "author": "",
   "license": "ISC",
