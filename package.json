@@ -8,8 +8,7 @@
     "node": "5.7.0"
   },
   "scripts": {
-    "start": "node server.js",
-    "postinstall": "webpack --config ./webpack.config.js"
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
