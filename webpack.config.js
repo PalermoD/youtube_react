@@ -1,23 +1,43 @@
+var path = require('path');
+var webpack = require('webpack');
+
 module.exports = {
+  devtool: 'eval',
+
   entry: [
-    './src/index.js'
+    'webpack-dev-server/client?http://localhost:3000',
+    'webpack/hot/only-dev-server',
+    './src/index'
   ],
+
   output: {
-    path: __dirname,
-    publicPath: '/',
-    filename: 'bundle.js'
+    path: path.join(__dirname, 'public'),
+    filename: 'bundle.js',
+    publicPath: '/public/'
   },
-  module: {
-    loaders: [{
-      exclude: /node_modules/,
-      loader: 'babel'
-    }]
-  },
+
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
+  ],
+
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
-  devServer: {
-    historyApiFallback: true,
-    contentBase: './'
+
+  module: {
+    loaders: [
+      { test: /\.jsx$/,
+        loader: 'react-hot!babel',
+        include: path.join(__dirname, 'src') },
+      { test: /\.js$/,
+        loader: 'babel',
+        include: path.join(__dirname, 'src') },
+      { test: /\.scss?$/,
+        loader: 'style!css!sass',
+        include: path.join(__dirname, 'css') },
+      { test: /\.css$/,
+        loader: 'style!css' }
+    ]
   }
-};
+}
