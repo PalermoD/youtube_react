@@ -5,6 +5,7 @@
   "main": "index.js",
   "repository": "git@github.com:PalermoD/youtube_react.git",
   "scripts": {
+    "postinstall": "webpack --config ./webpack-prod.config.js --progress --colors",
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
   },
   "author": "",
