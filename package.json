@@ -25,5 +25,12 @@
     "react-redux": "^4.0.0",
     "redux": "^3.0.4",
     "youtube-api-search": "0.0.5"
+  },
+  "start-prod": {
+  "command": "node ./bin/server.js",
+  "env": {
+    "NODE_PATH": "./src",
+    "NODE_ENV": "production",
+    "APIPORT": 3030
   }
 }
