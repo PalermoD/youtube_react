@@ -20,7 +20,7 @@ class App extends Component {
   		selectedVideo: null
   	};
 
-  this.videoSearch('youtube');
+  this.videoSearch('react');
 
   }
 
