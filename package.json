@@ -5,6 +5,7 @@
   "main": "index.js",
   "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
   "scripts": {
+    "postinstall": "webpack --config ./webpack-production.config.js --progress --colors",
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
   },
   "author": "",
@@ -20,7 +21,9 @@
   "dependencies": {
     "babel-eslint": "^4.0.5",
     "babel-preset-stage-1": "^6.1.18",
+    "express": "^4.13.4",
     "lodash": "^3.10.1",
+    "path": "^0.12.7",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-redux": "^4.0.0",
