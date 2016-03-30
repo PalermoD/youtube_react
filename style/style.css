@@ -1,3 +1,7 @@
+body {
+	background-color: rgb(52, 50, 53) !important;
+}
+
 .search-bar {
 	margin: 20px;
 	text-align: center;
@@ -16,6 +20,7 @@
 	margin-top:10px;
 	padding: 10px;
 	border: 1px solid #ddd;
+	background-color: white;
 }
 
 .list-group-item {
@@ -23,5 +28,5 @@
 }
 
 .list-group-item:hover {
-	background-color: #eee;
+	background-color: rgb(225, 38, 1);
 }
